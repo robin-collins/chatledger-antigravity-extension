@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📦 Open VSX Marketplace
+    url: https://open-vsx.org/extension/robin-collins/chatledger-antigravity
+    about: Install or update the extension from the Open VSX Registry
+  - name: 📖 Changelog
+    url: https://github.com/robin-collins/chatledger-antigravity-extension/blob/main/CHANGELOG.md
+    about: Check recent changes and releases before reporting issues
