@@ -4,6 +4,10 @@ All notable changes to the "chatledger-antigravity" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.5] - 2026-01-12
+
+chore: update README.md and package.json for v1.1.5 release
+
 ## [1.1.4] - 2026-01-12
 
 chore: prepare v1.1.4 release with extension icon
