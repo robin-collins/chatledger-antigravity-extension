@@ -4,17 +4,41 @@ All notable changes to the "chatledger-antigravity" extension will be documented
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.4] - 2026-01-12
+
+chore: prepare v1.1.4 release with extension icon
+
+Add extension icon for marketplace visibility and update version to 1.1.4.
+Enhance .vscodeignore to exclude development files and fix Windows path
+handling in exporter for cross-platform compatibility.
+
+### Added
+
+- Add icon.png for VS Code marketplace
+- Add build:vsix script for package generation
+
+### Changed
+
+- Update version from 1.1.3 to 1.1.4
+- Exclude development files from extension package
+
+### Fixed
+
+- Fix Windows drive letter path normalization
+
 ## [1.1.3] - 2026-01-11
 
 ### Fixed
+
 - Code block detection for fences without language identifiers
-  - Both ```` ``` ```` and ```` ```yaml ```` now correctly detected
+  - Both ` ``` ` and ` ```yaml ` now correctly detected
   - Tracks fence length to ensure matching open/close
   - Strips trailing carriage returns before pattern matching
 
 ## [1.1.2] - 2026-01-11
 
 ### Added
+
 - `Chatledger: Reset Built-in Sensitive Patterns to Default` command
   - Restores the 9 default patterns to User settings
   - Clears any Workspace overrides
@@ -23,12 +47,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.1.1] - 2026-01-11
 
 ### Fixed
+
 - Code block detection now properly handles all CommonMark cases:
   - Opening/closing fences must use the same character (` or ~)
   - Closing fence must not have content after it
   - Handles 3+ backticks/tildes and up to 3 spaces of indentation
 
 ### Added
+
 - Toolbar buttons in Sensitive Content view: Export Now, List Conversations, Validate Patterns, Show Status
 - Extension version displayed in view title (e.g., "Sensitive Content v1.1.1")
 - Icons for toolbar commands
@@ -36,6 +62,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.1.0] - 2026-01-11
 
 ### Added
+
 - **Configuration Settings** (SPEC.md alignment)
   - `chatledger.censorSensitiveContent` - Enable/disable censoring of sensitive content
   - `chatledger.builtInSensitivePatterns` - Fully editable built-in patterns (9 defaults)
@@ -60,6 +87,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
   - Empty state with helpful message and Export Now link
 
 ### Changed
+
 - Replaced single `sensitivePatterns` setting with two-tier approach (builtIn + additional)
 - Sensitive patterns now configurable from settings (previously hardcoded)
 - Exporter now applies censoring before writing markdown files
@@ -67,6 +95,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ## [1.0.0] - 2026-01-10
 
 ### Added
+
 - Complete extension implementation per SPEC.md
 - **Core Infrastructure**
   - Logger utility with timestamped output channel
@@ -95,6 +124,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
   - Project guidance for AI assistants (CLAUDE.md)
 
 ### Fixed
+
 - VS Code engine requirement lowered from ^1.107.0 to ^1.75.0 for compatibility
 - Extension activation event changed from `workspaceContains:*` to `onStartupFinished`
 - Path normalization for workspace filtering
